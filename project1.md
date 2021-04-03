@@ -9,10 +9,13 @@ sudo ufw allow "Apache"
 
 ### Accessed the ec2 IP on the browser
 http://Public-IP-Address
+![alt text](https://growmech.s3.amazonaws.com/devops/Screenshot+2021-04-03+at+6.14.38+AM.png)
+
   
 ### Installed and configured mysql server
 sudo apt install mysql-server<br/>
 sudo mysql_secure_installation
+![alt text](https://growmech.s3.amazonaws.com/devops/Screenshot+2021-04-03+at+5.52.05+AM.png)
 
 ### Set up PHP with important depencies
 sudo apt install php libapache2-mod-php php-mysql
@@ -26,10 +29,12 @@ sudo a2ensite projectlamp<br/>
 sudo a2dissite 000-default<br/>
 sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html<br/>
 Testing on my browser
+![alt text](https://growmech.s3.amazonaws.com/devops/Screenshot+2021-04-03+at+6.06.31+AM.png)
 
 ### Enabled webserver to serve PHP files
 sudo vim /etc/apache2/mods-enabled/dir.conf<br/>
 moved index.php to first
+
 
 
 
